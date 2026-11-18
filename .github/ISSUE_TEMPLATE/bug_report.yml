@@ -1,0 +1,70 @@
+name: Bug report
+description: Something in Pondo Flow does not work as it should.
+title: "[Bug] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for testing Pondo Flow! **Please never post real amounts, names, account numbers or other private details** — use made-up examples. Security problems: do not file them here, see [SECURITY.md](../blob/main/SECURITY.md).
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Describe the problem in a sentence or two.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Exactly what you tapped, step by step, so we can make it happen again.
+      placeholder: |
+        1. Open Reports
+        2. Tap the Income total
+        3. …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of problem
+      options:
+        - Wrong number or total in a report / balance
+        - Data lost or changed by itself
+        - App crashed or froze
+        - Something looks wrong (layout, text, translation)
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: phone
+    attributes:
+      label: Phone model and Android version
+      placeholder: "e.g. Samsung Galaxy A03, Android 13"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: Settings › About shows it.
+      placeholder: "e.g. 1.0.0 (1)"
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: App language
+      options: [English, Español, Français, Português (Brasil), العربية, Kiswahili, हिन्दी, বাংলা, Bahasa Indonesia, Русский]
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots (optional)
+      description: Drag images here. Blur or crop any real amounts or names first.

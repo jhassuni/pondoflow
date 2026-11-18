@@ -1,0 +1,21 @@
+name: Feature idea
+description: Suggest something that would make Pondo Flow more useful.
+title: "[Idea] "
+labels: ["idea"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: The task or situation, in your own words.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: Ideas are welcome but are not bugs, so they are not part of the bug bounty.
