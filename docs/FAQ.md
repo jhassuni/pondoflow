@@ -14,8 +14,9 @@ internet turned off.
 ### What if I lose my phone, or it breaks?
 
 Your books are gone with the device, unless you have a backup. Set up **Auto-Backup (Safety
-Net)** in **⋮ → Settings & Backup**, or export a backup yourself with **Export JSON**. Then
-install Pondo Flow on the new phone and use **Import JSON Backup** to bring your books back.
+Net)** in **⋮ → Settings & Backup**, or export a backup yourself with **Export backup** — one
+ZIP with your books and your receipt photos. Then install Pondo Flow on the new phone and use
+**Import backup** to bring your books and photos back.
 
 Pondo Flow keeps the key of your ledger on the device as well, so a new install cannot open
 the old ledger on its own — it needs the backup you saved.
@@ -24,12 +25,14 @@ the old ledger on its own — it needs the backup you saved.
 
 No. Every install has its own books, and there is no server copy that keeps them in step. If
 you want the same books on a second phone, export a backup on the first phone and import it on
-the second.
+the second. Keeping your books in step across your phones is planned for the next big update
+(Premium).
 
 ### Can my partner and I share one ledger?
 
-Not in the app. The books live on one device. You can both look at them, or you can export a
-copy of the entries, a report, or the contacts list to share.
+Not in the app today. The books live on one device. You can both look at them, or you can export
+a copy of the entries, a report, or the contacts list to share. Sharing one set of books with your
+household or organization is planned for the next big update (Premium).
 
 ### Does Pondo Flow work without internet?
 
@@ -47,7 +50,8 @@ After you reinstall the app, pick the same folder again and use **Restore Latest
 
 It is a plain copy of your books, so treat it the way you would treat a paper ledger: keep it
 somewhere only you can reach. The database on your phone is encrypted; the backup file is the
-one readable copy, by design.
+one readable copy, by design. A backup made with **Export backup** also carries your receipt
+photos, and anyone who has the file can open them too.
 
 ## Locking and privacy
 
@@ -191,7 +195,8 @@ in **⋮ → Settings & Backup**.
 
 ### Does Pondo Flow handle more than one currency?
 
-Not at the same time — your books keep one currency. Choose it in **⋮ → Settings & Backup →
+Not at the same time — your books keep one currency (more than one currency is planned for the
+next big update, Premium). Choose it in **⋮ → Settings & Backup →
 Currency & Region**, either **Auto (Device Local)** or a currency you pick.
 
 ### Is Pondo Flow available in my language?
@@ -199,3 +204,11 @@ Currency & Region**, either **Auto (Device Local)** or a currency you pick.
 It ships in English, Español, Français, Português (Brasil) and العربية, and in five
 community translations marked **Beta / Community Translated**: Kiswahili, हिन्दी, বাংলা,
 Bahasa Indonesia and Русский. Change the language in **⋮ → Settings & Backup → Language**.
+
+## Help
+
+### How do I contact support or report a bug?
+
+In the app, open **⋮ → Settings & Backup → About Pondo Flow → Contact support** — it opens your
+email app with a message to **support@sigbin.net**. Or email us directly. Bugs and ideas can
+also go to the public tracker: [open an issue](https://github.com/jhassuni/pondoflow/issues/new/choose).

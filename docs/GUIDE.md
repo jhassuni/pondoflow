@@ -18,6 +18,7 @@ Every screen name and button in this guide is written exactly as the app shows i
 - [Backup and restore](#backup-and-restore)
 - [Audit log and closing a period](#audit-log-and-closing-a-period)
 - [Privacy mode](#privacy-mode)
+- [About, privacy and support](#about-privacy-and-support)
 - [Languages](#languages)
 
 ## Getting started
@@ -153,6 +154,10 @@ then choose **Camera** to take one or **Gallery** to pick an existing photo. An 
 up to five receipt photos. Tapping a photo opens it full screen; **Delete photo** removes it
 from the entry.
 
+Each photo is made smaller, stripped of the details that say where and when it was taken, and
+kept encrypted on the phone. **Export backup** carries the photos along (see
+[Backup and restore](#backup-and-restore)).
+
 ## Bills to pay and to collect
 
 Open **⋮ → Bills to Pay** for the money you owe, and **⋮ → To Collect** for the money owed to
@@ -264,9 +269,16 @@ Open **⋮ → Settings & Backup**. Two cards do the work.
 
 ### Export & Import (Data Portability)
 
-- **Export JSON** writes your whole database to a file.
+- **Export backup** writes one ZIP with your whole database **and your receipt photos**. Before
+  it saves, it tells you how many photos it carries and how big the file is (for example
+  "12 photos, 4.1 MB").
+- **Import backup** reads such a ZIP back in, photos included — so a restore on a new phone
+  brings the pictures back too. A backup is restored completely or not at all.
+- **Export JSON** writes your database (without the photos) to a single file.
 - **Export CSVs (.zip)** writes the tables as a zipped set of CSV files.
-- **Import JSON Backup** reads a backup back in.
+- **Import JSON Backup** reads a JSON backup back in.
+
+Keep backup files private: anyone who has the file can open your books **and** the photos in it.
 
 Android's own file picker asks where to save and which file to open, so you choose the place.
 A restore **replaces** your current data — Pondo Flow asks you to confirm first, and offers to
@@ -317,6 +329,17 @@ and the preview in the recents are blocked, so your books never leave the app by
 
 While the app lock is on, privacy mode cannot be turned off — the app lock already keeps the
 window secure.
+
+## About, privacy and support
+
+Open **⋮ → Settings & Backup → About Pondo Flow**:
+
+- **Privacy policy** and **Terms of use** open inside the app — they work without internet.
+- **Contact support** opens your email app with a message to **support@sigbin.net**, with the
+  app and Android version filled in (never your books). If no email app is installed, the address
+  is shown so you can copy it.
+
+Found a bug or have an idea? [Open an issue](https://github.com/jhassuni/pondoflow/issues/new/choose).
 
 ## Languages
 
