@@ -15,7 +15,7 @@ internet access at all.
 
 ## Help
 - Privacy policy: coming soon
-- User guide and FAQ: coming soon
+- [User guide](docs/GUIDE.md) · [FAQ](docs/FAQ.md)
 
 ## Report a bug or suggest an idea
 Open an issue with the **Bug report** or **Feature idea** form: [New issue](../../issues/new/choose).
