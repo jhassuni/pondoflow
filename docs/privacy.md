@@ -35,7 +35,7 @@ Pondo Flow keeps the following on your device, so it can show your books:
 | --- | --- |
 | Ledger | Funds, projects, cash ledgers (cash on hand, bank accounts), the chart of accounts |
 | Entries | Money in, money out, transfers between funds, starting balances, the memo, the category, the date |
-| Receipt photos | A picture of a receipt you took or picked, attached to an entry — at most five per entry |
+| Receipt photos | A picture of a receipt you took or picked, attached to an entry — at most five per entry; a backup you export can carry the picture with it |
 | Obligations | Bills to pay and amounts to collect, with the payee, the amount and the due date |
 | Budgets | Budget amount, fund, project, expense category and period |
 | Contacts | Name, phone number, email address, notes, type, and a photo you may add |
@@ -102,7 +102,7 @@ account, no advertising ID and no device ID of its own.
   and re-encoded as a JPEG, which drops the metadata of the photo — the place
   it was taken, the device and the time. It is decrypted in the memory of the
   app only while you are looking at it, and no unencrypted copy is written
-  anywhere.
+  anywhere. A backup copy is encrypted again, with the backup's own key (§5).
 - **The temporary copy of a photo is deleted at once.** The camera app writes
   the picture into a temporary file in the app's own cache; the app reads it,
   encrypts it and deletes that temporary file immediately — and also when you
@@ -125,11 +125,12 @@ Every file the app writes outside its own storage is a file you asked for.
 - **Automatic snapshots are off until you turn them on.** With the setting on,
   the app writes a plain-text JSON snapshot into the folder you picked — once
   when you open the app and once a day — and keeps the newest five. It skips
-  the snapshot while the app lock keeps your books closed.
+  the snapshot while the app lock keeps your books closed; no photo is in it.
 - **Manual exports** mostly go through Android's own file picker, so you
   choose the file name and the place every time. Settings › *Export & Import*
-  writes a JSON backup or a ZIP of CSV tables; the Entries, Cash & Bank and
-  Contacts screens also write a PDF, a CSV or an Excel workbook.
+  writes a **backup** (your books and your receipt photos in one ZIP), a JSON
+  file, or a ZIP of CSV tables; the Entries, Cash & Bank and Contacts screens
+  also write a PDF, a CSV or an Excel workbook.
 - **The reports CSV takes a second route.** The *Export CSV* action of the
   Reports screen writes the reports it is showing as plain-text CSV files into
   the app's own cache and hands them to Android's share sheet
@@ -138,19 +139,29 @@ Every file the app writes outside its own storage is a file you asked for.
   to those files for the time of the share, and the files are removed from the
   cache when the share is over. Nothing is shared on its own: the share sheet
   only opens after you tap the export.
-- **A restore** (Settings › *Import JSON Backup*) reads a file you picked and
-  replaces your current books with it, after you confirm. Keep a backup of the
-  current state first if you are unsure.
-- **These files are plain text.** A JSON backup and a CSV export are readable
-  by any text editor: they carry your entries, amounts and memos, and a JSON
-  backup also carries your contacts and the newest rows of the audit log.
-  Treat them like paper statements: store them somewhere you trust.
-- **A receipt picture is not in the backup.** A JSON backup carries the record
-  of a receipt photo — the entry it belongs to, its type, its size and the path
-  it had on that phone — but not the encrypted picture itself. A ledger
-  restored on another phone still lists the receipt, and the app then says
-  *Photo not on this device*. Only the record travels; the picture stays on
-  the phone it was taken on.
+- **A restore** (Settings › *Import backup*) reads a file you picked — a
+  backup ZIP or a plain JSON backup — and replaces your current books with it,
+  after you confirm. Keep a backup of the current state first if you are
+  unsure. A restore takes everything or nothing: a backup that does not match
+  its own list of photos, or a photo that was changed, is refused, and your
+  books stay as they are.
+- **These files are plain text** — with one exception. A JSON backup and a CSV
+  export are readable by any text editor: they carry your entries, amounts and
+  memos, and a JSON backup also carries your contacts and the newest rows of
+  the audit log. The photo files inside a backup ZIP are the exception: they
+  are encrypted with a key of the backup's own — and that key sits in the same
+  ZIP, beside them. Anyone who has the backup file can open the photos in it,
+  exactly as they can read the JSON next to them. Treat every backup like a
+  paper statement: store it somewhere only you can reach.
+- **A receipt picture travels in the backup ZIP.** Settings › *Export backup*
+  writes a ZIP: `backup.json` — the snapshot, in plain text — plus one
+  `attachments/<id>.enc` file per receipt photo. The dialog before the export
+  tells you how many photos are on the device and how much space they take, and
+  a restore re-encrypts every photo with the key of the phone that reads it.
+  Nothing is uploaded: the ZIP is only a file you asked for, in the place you
+  picked. The plain *Export JSON* file and the automatic snapshots carry only
+  the **record** of a photo, so a restored ledger lists the receipt and the app
+  says *Photo not on this device*.
 
 ## 6. Deleting your data
 
@@ -188,13 +199,12 @@ Questions about this policy, or about the data Pondo Flow holds, can be sent to:
 sigbin.net
 Mandaue City, Cebu, Philippines
 
-
 ---
 
 ## Appendix A — where each statement comes from
 
-Every claim above was checked in the code of `main` at commit `83d76f51` (the
-receipt photos merged as `0bdbe0e1`). Paths are relative to the repository
+Every claim above was checked in the code of `main` at commit `6bb1b07c` (the
+backups with the receipt photos merged as `0745bf1e`). Paths are relative to the repository
 root.
 
 | # | Statement | Where it lives in the code |
@@ -236,5 +246,7 @@ root.
 | 35 | The camera writes the picture into a temporary file in the app's own cache, through the `FileProvider`; the copy is read once and deleted at once, and also when the reader cancels the camera; the leftovers of a killed session are swept when the photo section is opened and at the start of the app | `feature/transactions/src/main/kotlin/com/fundledger/feature/transactions/ReceiptPhotos.kt:1016-1024,1196-1202,952-959,1358-1370,1376-1378,390-399`; `app/src/main/kotlin/com/fundledger/app/FundLedgerApplication.kt:202-235` |
 | 36 | The picture is shrunk to 1600 px, re-encoded as JPEG (which drops the EXIF — the place, the device and the time), encrypted with AES-256-GCM under a Keystore key that cannot leave the device, and written to the private storage as `filesDir/attachments/<id>.enc` | `core/data/src/main/kotlin/com/fundledger/core/data/attachments/ReceiptPhotoStore.kt:36-40,84-86,260-289,309-315,334-350,457-461` |
 | 37 | The picture is read back decrypted **in memory only** and the viewer writes it nowhere; the user can open it full-screen and delete it, and the delete asks first, removes the encrypted file and soft-deletes the record; five photos per entry | `core/data/src/main/kotlin/com/fundledger/core/data/attachments/ReceiptPhotoStore.kt:129-159,161-182,459`; `feature/transactions/src/main/kotlin/com/fundledger/feature/transactions/ReceiptPhotos.kt:660-664,505-531,671-749,757-780` |
-| 38 | The JSON backup carries the attachment **rows** but no photo file, so a restored row reads as *Photo not on this device* | `core/data/src/main/kotlin/com/fundledger/core/data/export/BackupExportManager.kt:182,1240-1241`; `feature/transactions/src/main/kotlin/com/fundledger/feature/transactions/ReceiptPhotos.kt:634-639`, `feature/transactions/src/main/res/values/strings.xml:230` |
+| 38 | The plain JSON backup and the automatic snapshot carry the attachment **rows** but no photo file, so a restored row reads as *Photo not on this device* | `core/data/src/main/kotlin/com/fundledger/core/data/export/BackupExportManager.kt:182,1240-1241,1345`; `feature/transactions/src/main/kotlin/com/fundledger/feature/transactions/ReceiptPhotos.kt:634-639`, `feature/transactions/src/main/res/values/strings.xml:230` |
 | 39 | The wipe deletes the whole private storage, so the receipt photos go with it; deleting an entry removes the photos of that entry | `core/data/src/main/kotlin/com/fundledger/core/data/wipe/LocalDataWipe.kt:506-507`; `core/accounting/src/main/kotlin/com/fundledger/core/accounting/TransactionService.kt:4344`, `core/data/src/main/kotlin/com/fundledger/core/data/attachments/ReceiptPhotoStore.kt:205-246` |
+| 40 | A backup that carries the photos is a **ZIP**: `backup.json` — the snapshot, in plain text — plus one `attachments/<id>.enc` file per photo; the export dialog shows how many photos and how much space the file will take; a restore of it takes everything or nothing (the refusals of the archive, and the removal of what a refused restore had already written) | `core/data/src/main/kotlin/com/fundledger/core/data/export/BackupPhotoArchive.kt:44-47,86,88-92,196-235`; `core/data/src/main/kotlin/com/fundledger/core/data/export/BackupExportManager.kt:330-363,442-486`; `feature/settings/src/main/kotlin/com/fundledger/feature/settings/SettingsScreen.kt:1034-1056`; `feature/settings/src/main/res/values/strings.xml:93,96-99` |
+| 41 | The photos in that ZIP are encrypted with the **backup's own key**, and that key travels inside the same ZIP; a restore re-encrypts every photo with the key of the phone that reads it | `core/data/src/main/kotlin/com/fundledger/core/data/export/BackupPhotoArchive.kt:98-101,134,205`; `core/data/src/main/kotlin/com/fundledger/core/data/attachments/ReceiptPhotoStore.kt:189-222` |
