@@ -15,7 +15,7 @@ internet access at all.
 
 ## Help
 - [User guide](docs/GUIDE.md) · [FAQ](docs/FAQ.md) · [Support](SUPPORT.md) — hello@joevin.me
-- [Privacy policy](https://jhassuni.github.io/pondoflow/privacy)
+- [Privacy policy](https://jhassuni.github.io/pondoflow/privacy) · [Terms of use](https://jhassuni.github.io/pondoflow/terms)
 
 ## Report a bug or suggest an idea
 Open an issue with the **Bug report** or **Feature idea** form: [New issue](../../issues/new/choose).
