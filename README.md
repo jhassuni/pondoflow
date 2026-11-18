@@ -14,7 +14,6 @@ internet access at all.
 **Status:** testing on Google Play (link coming soon).
 
 ## Help
-- Privacy policy: coming soon
 - [User guide](docs/GUIDE.md) · [FAQ](docs/FAQ.md) · [Support](SUPPORT.md) — hello@joevin.me
 - [Privacy policy](https://jhassuni.github.io/pondoflow/privacy)
 
