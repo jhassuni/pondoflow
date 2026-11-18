@@ -14,7 +14,7 @@ internet turned off.
 ### What if I lose my phone, or it breaks?
 
 Your books are gone with the device, unless you have a backup. Set up **Auto-Backup (Safety
-Net)** in **⋮ → Settings & Backup**, or export a backup yourself with **Export backup** — one
+Net)** in **⋮ → Settings → Backup**, or export a backup yourself with **Export backup** — one
 ZIP with your books and your receipt photos. Then install Pondo Flow on the new phone and use
 **Import backup** to bring your books and photos back.
 
@@ -40,7 +40,7 @@ Yes, all of it. There is nothing to download and nothing to sync.
 
 ### How do I keep a backup?
 
-Open **⋮ → Settings & Backup**. **Back Up Now** writes a snapshot at once. Turn on
+Open **⋮ → Settings → Backup**. **Back Up Now** writes a snapshot at once. Turn on
 **Automatic snapshots** and choose a folder you control, and Pondo Flow writes a snapshot
 when the app opens and once a day.
 
@@ -68,12 +68,12 @@ books private, not to lock you out of your own data.
 
 ### Can I stop anyone from taking screenshots of my books?
 
-Yes. Turn on **Privacy mode** in **⋮ → Settings & Backup → Device & Privacy**. Screenshots and
+Yes. Turn on **Privacy mode** in **⋮ → Settings → General → Device & Privacy**. Screenshots and
 the preview in the recents are blocked while it is on.
 
 ### Can I unlock a period I closed by mistake?
 
-Yes. Open **⋮ → Settings & Backup → Books**, find the period under **Closed periods**, and
+Yes. Open **⋮ → Settings → Bookkeeping → Books**, find the period under **Closed periods**, and
 tap **Unlock**. Pondo Flow asks you to confirm who you are, and writes the unlock to the
 audit log.
 
@@ -191,24 +191,24 @@ money that came in during the period, which is why it shows up differently on a 
 On the **Reports** tab, use **Export CSV** or **Share reports** for a PDF. The **Entries** and
 **Contacts** screens export the list you are looking at as a **PDF Document**, a **CSV File**
 or an **Excel Workbook**. For the whole database, use **Export JSON** or **Export CSVs (.zip)**
-in **⋮ → Settings & Backup**.
+in **⋮ → Settings → Backup**.
 
 ### Does Pondo Flow handle more than one currency?
 
 Not at the same time — your books keep one currency (more than one currency is planned for the
-next big update, Premium). Choose it in **⋮ → Settings & Backup →
+next big update, Premium). Choose it in **⋮ → Settings → General →
 Currency & Region**, either **Auto (Device Local)** or a currency you pick.
 
 ### Is Pondo Flow available in my language?
 
 It ships in English, Español, Français, Português (Brasil) and العربية, and in five
 community translations marked **Beta / Community Translated**: Kiswahili, हिन्दी, বাংলা,
-Bahasa Indonesia and Русский. Change the language in **⋮ → Settings & Backup → Language**.
+Bahasa Indonesia and Русский. Change the language in **⋮ → Settings → General → Language**.
 
 ## Help
 
 ### How do I contact support or report a bug?
 
-In the app, open **⋮ → Settings & Backup → About Pondo Flow → Contact support** — it opens your
+In the app, open **⋮ → Settings → About → About Pondo Flow → Contact support** — it opens your
 email app with a message to **support@sigbin.net**. Or email us directly. Bugs and ideas can
 also go to the public tracker: [open an issue](https://github.com/jhassuni/pondoflow/issues/new/choose).

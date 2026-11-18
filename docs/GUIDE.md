@@ -49,14 +49,14 @@ Tapping a card opens the list of entries behind it.
 
 ### Currency
 
-Open **⋮ → Settings & Backup → Currency & Region**. The card names the currency that is active
+Open **⋮ → Settings → General → Currency & Region**. The card names the currency that is active
 and shows a sample amount, so you can check the symbol and the formatting before you record
 anything. **Auto (Device Local)** follows the currency of your device; you can also pick one
 currency from the list.
 
 ### App lock
 
-Open **⋮ → Settings & Backup → Biometric App Lock** and turn it on. Pondo Flow then asks for
+Open **⋮ → Settings → General → Biometric App Lock** and turn it on. Pondo Flow then asks for
 your fingerprint, your face, or the PIN of the device whenever it opens. Turning this switch on
 or off asks who you are first, so nobody else can change it behind your back.
 
@@ -89,7 +89,7 @@ negative — that is a real warning, not a glitch.
 Inside a fund you can see its **Money In**, **Money Out**, its **Payables** and its
 **Receivables**, and open the entries behind them. **Edit Fund** renames it, changes its
 purpose or target, or corrects its starting balance. **Archive** sets a fund aside;
-**Un-archive** in **⋮ → Settings & Backup → Cash
+**Un-archive** in **⋮ → Settings → Bookkeeping → Cash
 Ledgers (Chart of Accounts)** brings it back — no money moves, it simply becomes active again.
 
 The **Projects** tab works the same way: **All Projects Overview**, **New Project**, and a
@@ -265,7 +265,7 @@ To take a copy of the list, tap **Export** and choose a **PDF Document**, a **CS
 
 ## Backup and restore
 
-Open **⋮ → Settings & Backup**. Two cards do the work.
+Open **⋮ → Settings → Backup**. Two cards do the work.
 
 ### Export & Import (Data Portability)
 
@@ -311,7 +311,7 @@ can tap **Restore** to bring it back.
 
 ### Closing a period
 
-Open **⋮ → Settings & Backup → Books**. Under **Period scheme** you can use a **Calendar
+Open **⋮ → Settings → Bookkeeping → Books**. Under **Period scheme** you can use a **Calendar
 year** or a **Custom fiscal year**. The card shows the **Current period**.
 
 Tap **Close this period** (or **Close the previous period**, which names the dates it covers)
@@ -324,7 +324,7 @@ periods**.
 
 ## Privacy mode
 
-Open **⋮ → Settings & Backup → Device & Privacy** and turn on **Privacy mode**. Screenshots
+Open **⋮ → Settings → General → Device & Privacy** and turn on **Privacy mode**. Screenshots
 and the preview in the recents are blocked, so your books never leave the app by accident.
 
 While the app lock is on, privacy mode cannot be turned off — the app lock already keeps the
@@ -332,7 +332,7 @@ window secure.
 
 ## About, privacy and support
 
-Open **⋮ → Settings & Backup → About Pondo Flow**:
+Open **⋮ → Settings → About → About Pondo Flow**:
 
 - **Privacy policy** and **Terms of use** open inside the app — they work without internet.
 - **Contact support** opens your email app with a message to **support@sigbin.net**, with the
@@ -343,7 +343,7 @@ Found a bug or have an idea? [Open an issue](https://github.com/jhassuni/pondofl
 
 ## Languages
 
-Open **⋮ → Settings & Backup → Language**. The app ships in these languages:
+Open **⋮ → Settings → General → Language**. The app ships in these languages:
 
 | Language | Status |
 | --- | --- |
