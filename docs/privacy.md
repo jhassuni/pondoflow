@@ -183,9 +183,9 @@ published, and the "Last updated" date above will change.
 
 Questions about this policy, or about the data Pondo Flow holds, can be sent to:
 
-**hello@joevin.me**
+**support@sigbin.net**
 
-joevin.me
+sigbin.net
 Mandaue City, Cebu, Philippines
 
 

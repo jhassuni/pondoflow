@@ -1,6 +1,6 @@
 # Support
 
-**Email:** [hello@joevin.me](mailto:hello@joevin.me) — we aim to reply within **3 working days**.
+**Email:** [support@sigbin.net](mailto:support@sigbin.net) — we aim to reply within **3 working days**.
 
 - **Found a bug?** Please use the [Bug report form](../../issues/new?template=bug_report.yml) — it asks for the
   steps, your phone model and the app version, which lets us fix it faster. Never post real amounts, names or

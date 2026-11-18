@@ -11,10 +11,10 @@ internet access at all.
 - Receipt photos · backup & restore · audit log · app lock and privacy mode
 - 10 languages
 
-**Status:** testing on Google Play (link coming soon).
+**Status:** testing on Google Play (link coming soon). A [sigbin.net](https://sigbin.net) app.
 
 ## Help
-- [User guide](docs/GUIDE.md) · [FAQ](docs/FAQ.md) · [Support](SUPPORT.md) — hello@joevin.me
+- [User guide](docs/GUIDE.md) · [FAQ](docs/FAQ.md) · [Support](SUPPORT.md) — support@sigbin.net
 - [Privacy policy](https://jhassuni.github.io/pondoflow/privacy) · [Terms of use](https://jhassuni.github.io/pondoflow/terms)
 
 ## Report a bug or suggest an idea

@@ -101,9 +101,9 @@ Using the app after that means you accept the new terms.
 
 Questions about these terms can be sent to:
 
-**hello@joevin.me**
+**support@sigbin.net**
 
-joevin.me
+sigbin.net
 Mandaue City, Cebu, Philippines
 
 
