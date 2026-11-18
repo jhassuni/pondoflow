@@ -13,6 +13,18 @@ internet access at all.
 
 **Status:** testing on Google Play (link coming soon). A [sigbin.net](https://sigbin.net) app.
 
+## Coming in the next big update (Premium)
+
+- **Device sync** and encrypted cloud backup — your books on all your phones
+- **Multi-user** — share one set of books with your whole household or organization
+- **Receipt and document cloud storage**
+- **Multi-currency**
+- **Unlimited funds and projects**
+
+## Found a bug or have an idea?
+
+[Open an issue](https://github.com/jhassuni/pondoflow/issues/new/choose) — every report is public, so you can follow it until it is fixed.
+
 ## Help
 - [User guide](docs/GUIDE.md) · [FAQ](docs/FAQ.md) · [Support](SUPPORT.md) — support@sigbin.net
 - [Privacy policy](https://jhassuni.github.io/pondoflow/privacy) · [Terms of use](https://jhassuni.github.io/pondoflow/terms)
