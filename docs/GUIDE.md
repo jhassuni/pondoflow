@@ -56,7 +56,7 @@ currency from the list.
 
 ### App lock
 
-Open **⋮ → Settings → General → Biometric App Lock** and turn it on. Pondo Flow then asks for
+Open **⋮ → Settings → General → App access lock** and turn it on. Pondo Flow then asks for
 your fingerprint, your face, or the PIN of the device whenever it opens. Turning this switch on
 or off asks who you are first, so nobody else can change it behind your back.
 
