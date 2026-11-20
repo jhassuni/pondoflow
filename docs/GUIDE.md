@@ -85,10 +85,21 @@ lock set, Pondo Flow cannot confirm who you are and the app lock cannot be used.
 
 ## Categories and the Chart of Accounts
 
-Open **⋮ → Settings → Books → Chart of Accounts**. Every account is listed in the five standard
-groups — **Assets**, **Liabilities**, **Equity**, **Income** and **Expenses** — with its number,
-sorted by number (1xxx Assets, 2xxx Liabilities, 3xxx Equity, 4xxx Income, 5xxx Expenses). Tap
-an account to open it:
+Categories are simply the **Income** and **Expenses** accounts of your chart, so everything
+lives in one place. **⋮ → Settings → Books** shows, from the top:
+
+- **Cash & Bank** — your Cash on Hand and Bank ledgers with their balances, **+ New ledger**
+  (up to 2 Cash on Hand and 5 Bank ledgers) and **Archived ledgers**. Tap a ledger to open it.
+- **Chart of Accounts** — tap **Open Chart of Accounts** for the whole chart.
+- **Books** (periods) and the **Audit log**.
+
+The Chart of Accounts lists every account in the five standard groups — **Assets**,
+**Liabilities**, **Equity**, **Income** and **Expenses** — with its number, sorted by number
+(1xxx Assets, 2xxx Liabilities, 3xxx Equity, 4xxx Income, 5xxx Expenses). Under the title,
+**Categories: N of 50** shows how many you use. **+ New ledger** sits in Assets, **+ Add
+category** in Income and in Expenses. The **⋮** next to the title offers **Add the household
+set**, **Add the organization set**, **Show disabled & archived**, and **Require fingerprint or
+PIN to lock / unlock a parent account** (off by default). Tap an account to open it:
 
 - **Account number** — every number can be changed (digits and dashes, up to 12 characters).
   It must be unique in the book. A new account gets the next free number of its group.
@@ -100,11 +111,10 @@ an account to open it:
   transfer them to a sub-account.
 - **Lock this account** — a locked parent takes no new entries, and its own entries cannot be
   moved or corrected. Unlock it to change them. Locking and unlocking are written to the audit
-  log. In **Settings → Books** you can choose **Require fingerprint or PIN to lock / unlock a
-  parent account** (off by default).
+  log.
 
 The default categories can be renamed (each rename is written to the audit log) and disabled,
-but not deleted. **Show disabled** lists the ones you turned off. The free version holds up to
+but not deleted. **Show disabled & archived** lists the ones you turned off. The free version holds up to
 **50 categories**, parents included; the core accounts and disabled categories do not count.
 
 ## Funds and projects
@@ -133,7 +143,7 @@ Inside a fund you can see its **Money In**, **Money Out**, its **Payables** and 
 **Receivables**, and open the entries behind them. **Edit Fund** renames it, changes its
 purpose or target, or corrects its starting balance. **Archive** sets a fund aside;
 **Un-archive** in **⋮ → Settings → Books → Cash
-Ledgers (Chart of Accounts)** brings it back — no money moves, it simply becomes active again.
+& Bank → Archived ledgers** brings it back — no money moves, it simply becomes active again.
 
 The **Projects** tab works the same way: **All Projects Overview**, **New Project**, and a
 project card showing **Available** and **Projected after obligations**. A project has a
