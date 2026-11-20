@@ -9,6 +9,7 @@ Every screen name and button in this guide is written exactly as the app shows i
 ## Contents
 
 - [Getting started](#getting-started)
+- [Categories and the Chart of Accounts](#categories-and-the-chart-of-accounts)
 - [Funds and projects](#funds-and-projects)
 - [Entries](#entries)
 - [Bills to pay and to collect](#bills-to-pay-and-to-collect)
@@ -25,7 +26,18 @@ Every screen name and button in this guide is written exactly as the app shows i
 
 ### Your first launch
 
-The first time Pondo Flow opens, the **Home** screen shows a three-card guide:
+Pondo Flow first asks **What are these books for?** and sets up your categories to match:
+
+- **Personal / household** (chosen by default) — salary, food & groceries, rent, electricity,
+  water, school…
+- **Organization / group** — for a church, club, NGO or project: donations, grants, program,
+  operations, travel, supplies…
+- **Customize** — pick the categories yourself from both sets, with **All** / **None** for each
+  group. Your own categories come later, from the entry form or from Settings.
+
+**Skip** starts a personal book. You can add the other set later in Settings.
+
+The **Home** screen then shows a three-card guide:
 
 1. **1 of 3 · Purpose-Driven Funds** — give all your money a clear purpose.
 2. **2 of 3 · Projects & Events** — tag spending by project.
@@ -51,8 +63,15 @@ Tapping a card opens the list of entries behind it.
 
 Open **⋮ → Settings → General → Currency & Region**. The card names the currency that is active
 and shows a sample amount, so you can check the symbol and the formatting before you record
-anything. **Auto (Device Local)** follows the currency of your device; you can also pick one
-currency from the list.
+anything.
+
+- Tap a quick choice: **Device** (the currency of your phone), **PHP**, **USD** or **EUR**.
+- **More currencies…** opens a list you can search by country or currency.
+- **+ Add custom currency** adds one of your own: a **code** of three letters, a **symbol** of
+  up to four characters, and **0 to 3 decimals**.
+
+The screen refreshes when you change the currency, so every amount shows the new symbol at
+once. **Delete all data** keeps your currency and your language.
 
 ### App lock
 
@@ -63,6 +82,30 @@ or off asks who you are first, so nobody else can change it behind your back.
 When the app is locked you see **Pondo Flow is locked**; tap **Unlock** and confirm. The app
 locks itself again a minute after you leave it in the background. If the device has no screen
 lock set, Pondo Flow cannot confirm who you are and the app lock cannot be used.
+
+## Categories and the Chart of Accounts
+
+Open **⋮ → Settings → Books → Chart of Accounts**. Every account is listed in the five standard
+groups — **Assets**, **Liabilities**, **Equity**, **Income** and **Expenses** — with its number,
+sorted by number (1xxx Assets, 2xxx Liabilities, 3xxx Equity, 4xxx Income, 5xxx Expenses). Tap
+an account to open it:
+
+- **Account number** — every number can be changed (digits and dashes, up to 12 characters).
+  It must be unique in the book. A new account gets the next free number of its group.
+- **Add sub-account** — put accounts under a parent, for example *Wallet* and *Coin bank* under
+  *Cash on Hand*. A sub-account gets the parent's number plus *-01*, *-02*… The free version
+  allows two levels.
+- **Own entries** — a parent that already had entries keeps them. They still count in its total
+  and show as a line *"<parent> — own entries"* in the chart and in the reports, until you
+  transfer them to a sub-account.
+- **Lock this account** — a locked parent takes no new entries, and its own entries cannot be
+  moved or corrected. Unlock it to change them. Locking and unlocking are written to the audit
+  log. In **Settings → Books** you can choose **Require fingerprint or PIN to lock / unlock a
+  parent account** (off by default).
+
+The default categories can be renamed (each rename is written to the audit log) and disabled,
+but not deleted. **Show disabled** lists the ones you turned off. The free version holds up to
+**50 categories**, parents included; the core accounts and disabled categories do not count.
 
 ## Funds and projects
 
@@ -89,7 +132,7 @@ negative — that is a real warning, not a glitch.
 Inside a fund you can see its **Money In**, **Money Out**, its **Payables** and its
 **Receivables**, and open the entries behind them. **Edit Fund** renames it, changes its
 purpose or target, or corrects its starting balance. **Archive** sets a fund aside;
-**Un-archive** in **⋮ → Settings → Bookkeeping → Cash
+**Un-archive** in **⋮ → Settings → Books → Cash
 Ledgers (Chart of Accounts)** brings it back — no money moves, it simply becomes active again.
 
 The **Projects** tab works the same way: **All Projects Overview**, **New Project**, and a
@@ -311,7 +354,7 @@ can tap **Restore** to bring it back.
 
 ### Closing a period
 
-Open **⋮ → Settings → Bookkeeping → Books**. Under **Period scheme** you can use a **Calendar
+Open **⋮ → Settings → Books**, card **Books**. Under **Period scheme** you can use a **Calendar
 year** or a **Custom fiscal year**. The card shows the **Current period**.
 
 Tap **Close this period** (or **Close the previous period**, which names the dates it covers)
@@ -343,7 +386,8 @@ Found a bug or have an idea? [Open an issue](https://github.com/jhassuni/pondofl
 
 ## Languages
 
-Open **⋮ → Settings → General → Language**. The app ships in these languages:
+Open **⋮ → Settings → General → Language** and tap a language: the app switches at once.
+**More languages…** lists them all. The app ships in these languages:
 
 | Language | Status |
 | --- | --- |

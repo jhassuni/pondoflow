@@ -73,7 +73,7 @@ the preview in the recents are blocked while it is on.
 
 ### Can I unlock a period I closed by mistake?
 
-Yes. Open **⋮ → Settings → Bookkeeping → Books**, find the period under **Closed periods**, and
+Yes. Open **⋮ → Settings → Books**, card **Books**, find the period under **Closed periods**, and
 tap **Unlock**. Pondo Flow asks you to confirm who you are, and writes the unlock to the
 audit log.
 
