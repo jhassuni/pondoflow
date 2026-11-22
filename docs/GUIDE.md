@@ -12,6 +12,7 @@ Every screen name and button in this guide is written exactly as the app shows i
 - [Categories and the Chart of Accounts](#categories-and-the-chart-of-accounts)
 - [Funds and projects](#funds-and-projects)
 - [Entries](#entries)
+- [Credit cards](#credit-cards)
 - [Bills to pay and to collect](#bills-to-pay-and-to-collect)
 - [Budgets](#budgets)
 - [Reports](#reports)
@@ -51,7 +52,11 @@ your own fund first.
 
 - **Total Balance** — the cash you hold, across money in hand and money in the bank.
 - **Money In (Month)** and **Money Out (Month)** — what came in and what went out this month.
-- **Cash Coverage** — how much of the bills coming due your cash covers.
+- **Credit cards** — next to your cash: the **Total owed** on your cards, and **Available**
+  when a card has a limit. Tap a card to see its entries; with no card yet the tile offers
+  **Add a credit card**.
+- **Cash Coverage** — how much of the bills coming due your cash covers. What you owe on
+  your credit cards counts here too, because it is money you will have to pay.
 - **Action Queue** — what needs you: a bill to pay, an amount to collect, or a repeating entry
   to **Post** or **Skip**. A bill in the queue offers **Mark as Paid**, an amount to collect
   offers **Mark as Received**.
@@ -88,18 +93,34 @@ lock set, Pondo Flow cannot confirm who you are and the app lock cannot be used.
 Categories are simply the **Income** and **Expenses** accounts of your chart, so everything
 lives in one place. **⋮ → Settings → Books** shows, from the top:
 
-- **Cash & Bank** — your Cash on Hand and Bank ledgers with their balances, **+ New ledger**
-  (up to 2 Cash on Hand and 5 Bank ledgers) and **Archived ledgers**. Tap a ledger to open it.
+- **Cash, Bank & Cards** — your Cash on Hand and Bank ledgers with their balances, **+ New
+  ledger** (up to 2 Cash on Hand and 5 Bank ledgers), your credit cards with **+ New card**
+  (see [Credit cards](#credit-cards)) and **Archived ledgers**. Tap a ledger to open it.
 - **Chart of Accounts** — tap **Open Chart of Accounts** for the whole chart.
+- **Account Types** — the groups of your chart (see [Account Types](#account-types)).
 - **Books** (periods) and the **Audit log**.
 
-The Chart of Accounts lists every account in the five standard groups — **Assets**,
-**Liabilities**, **Equity**, **Income** and **Expenses** — with its number, sorted by number
-(1xxx Assets, 2xxx Liabilities, 3xxx Equity, 4xxx Income, 5xxx Expenses). Under the title,
-**Categories: N of 50** shows how many you use. **+ New ledger** sits in Assets, **+ Add
-category** in Income and in Expenses. The **⋮** next to the title offers **Add the household
-set**, **Add the organization set**, **Show disabled & archived**, and **Require fingerprint or
-PIN to lock / unlock a parent account** (off by default). Tap an account to open it:
+The Chart of Accounts opens with four summary cards — **Total assets**, **Total
+liabilities**, **Total equity** and **Net worth** (*Assets - Liabilities*). Below them are
+**Search accounts...** (by name or number), **Filter** and **Add Account**, which creates an
+account of any type with an optional subtype. Under the title, **Categories: N of 50** shows
+how many categories you use.
+
+The accounts follow in the five standard groups — **Assets**, **Liabilities**, **Equity**,
+**Income** and **Expenses** — each with its total; tap a group's header to fold it. Inside a
+group, accounts sit under their subtype (such as **Cash and Cash Equivalents**), sorted by
+number (1xxx Assets, 2xxx Liabilities, 3xxx Equity, 4xxx Income, 5xxx Expenses). Each account
+shows its number, name and balance. When the name needs the room, the amount moves to the
+line below it. A parent account folds and unfolds with the arrow at the right end of its row.
+The **⋮** next to the title offers **Add the household set**, **Add the organization set**,
+**Show disabled & archived**, and **Require fingerprint or PIN to lock / unlock a parent
+account** (off by default).
+
+Tap an account to open its sheet: the **Current balance**, its number and **Type**, **Total
+debits** and **Total credits**, its **Subtype**, its **Sub-accounts** (tap one to open it), and
+its most recent entries. Tap an entry to open it, or **See all** to open **Entries** showing
+only this account (a parent includes its sub-accounts); the chip on top of the list removes the
+filter. The sheet also holds:
 
 - **Account number** — every number can be changed (digits and dashes, up to 12 characters).
   It must be unique in the book. A new account gets the next free number of its group.
@@ -116,6 +137,31 @@ PIN to lock / unlock a parent account** (off by default). Tap an account to open
 The default categories can be renamed (each rename is written to the audit log) and disabled,
 but not deleted. **Show disabled & archived** lists the ones you turned off. The free version holds up to
 **50 categories**, parents included; the core accounts and disabled categories do not count.
+
+### Account Types
+
+**⋮ → Settings → Books → Account Types** shows the five types of your chart and, under each,
+its **subtypes** with **Accounts: N**. A subtype is only a heading that groups accounts. You
+cannot post to it, it has no balance of its own (its total is the sum of its accounts), and it
+does not count toward the 50 categories.
+
+At the top, **These books are for:** **Personal** or **Organization**. The fourth type is
+called **Income** in personal books and **Revenue** in an organization's books.
+
+The app starts you with these subtypes:
+
+- **Assets** — **Cash and Cash Equivalents** (your cash on hand and bank ledgers), **Current
+  Assets** (amounts owed to you) and **Long-term Assets**.
+- **Liabilities** — **Credit Cards**, **Current Payables** (bills you owe) and **Long-term
+  Payables**.
+- **Equity**, **Income** and **Expenses** start without subtypes; their accounts sit directly
+  under the type.
+
+Under any type, **+ Add subtype** creates a new one. Tap a subtype to **Rename** it, **Delete**
+it (its accounts stay in the books and become ungrouped under their type) or **Move accounts
+here**. An account can move to another subtype of the **same** type, or to **No subtype**, but
+never to another type. Your cash, bank, receivable and payable ledgers keep the group the app
+gave them; their sheet says so. Every change is written to the audit log.
 
 ## Funds and projects
 
@@ -154,9 +200,11 @@ into the fund you pick.
 ## Entries
 
 An **entry** is one movement of money. On **Home**, tap the round **New entry** button at the
-bottom right: the **Quick Entry** dialog opens right there, with three buttons — **Money In**,
-**Money Out** and **Transfer**. On the **Entries** tab the same button opens the full entry
-form, where the three modes are called **+ In**, **− Out** and **⇄ Move**.
+bottom right: the **Quick Entry** dialog opens right there, with four buttons — **Money In**,
+**Money Out**, **Card** and **Transfer**. On the **Entries** tab the same button opens the full
+entry form, where the modes are called **+ In**, **− Out** and **⇄ Move**. Next to **Filter**
+and the download button, **Adjust** corrects the balance of an account (see
+[Adjusting a balance](#adjusting-a-balance)).
 
 ### Recording money in or out
 
@@ -166,6 +214,10 @@ a bank account. The cash location is never filled in silently: if there is more 
 choose. Add a **Category**, an optional **Project (Optional)**, a **Received From (Payor)** or
 **Paid To (Payee)**, and a **Note (Memo)**. Then tap **Save Money In** or **Save Money Out**.
 
+Under **Money Out**, the **Category** list shows your expenses and your liabilities. Pick a
+liability — a credit card, for example — to record **Pay a liability**: the cash goes out and
+what you owe goes down.
+
 If the amount is more than the fund holds, Pondo Flow warns you with **Not Enough Money in
 Fund** and offers **Spend Anyway** or **Change Amount / Fund**.
 
@@ -174,8 +226,8 @@ written. Every save shows a short message with **Undo**.
 
 ### Moving money
 
-**⇄ Move** (or **Transfer** in Quick Entry) offers **Between Funds** and **Between Cash
-Accounts**.
+**⇄ Move** (or **Transfer** in Quick Entry) offers **Between Funds**, **Between Cash
+Accounts** and **Between Accounts**.
 
 - **Between Funds** moves money from one fund to another — pick a **From Fund** and a **To
   Fund**, and the **Cash Account (where the money is)** it is taken from. The money stays in
@@ -184,7 +236,34 @@ Accounts**.
   wallet to your bank. Pick the **Fund** it is booked to, a **From Cash Account** and a **To
   Cash Account**. The total of the fund does not change; only the cash location does.
 
+- **Between Accounts** moves an amount between two accounts of your chart, and a line under
+  the form says what it does — for example *This pays BDO Visa from Cash on Hand*. These moves
+  are allowed:
+  - between two accounts of the **same type** — always;
+  - between an **asset** and a **liability** — paying a card from cash, or a cash advance from
+    a card;
+  - between a **liability** and **equity**.
+
+  A move between an **asset** and **equity** is not possible: a change to your assets that
+  does not touch a liability always shows up in your income or expenses, so record it as
+  **Money In**, **Money Out** or an [adjustment](#adjusting-a-balance).
+
 Tap **Save Transfer** when you are done.
+
+### Adjusting a balance
+
+When an account's balance in the app differs from the real one — the cash in your wallet, or a
+bank statement — tap **Adjust** on the **Entries** tab. Pick the **Account to Adjust** (its
+**Current balance** is shown), then choose how:
+
+- **Set the Balance** — type the **Balance the Account Should Have**; the app posts the
+  difference.
+- **Add or Subtract** — type the **Amount to Add or Subtract** with **+** or **−**.
+
+**Other Side** decides where the difference goes: **Income / Expense** (the default), or the
+**Balance Adjustments** equity account if the difference is a correction rather than real
+income or spending. Tap **Save Adjustment**. The adjustment shows in the list like any entry,
+and it can be corrected later the same careful way as other entries.
 
 ### Correcting an entry
 
@@ -210,6 +289,34 @@ from the entry.
 Each photo is made smaller, stripped of the details that say where and when it was taken, and
 kept encrypted on the phone. **Export backup** carries the photos along (see
 [Backup and restore](#backup-and-restore)).
+
+## Credit cards
+
+Pondo Flow treats a credit card as what it is in your books: money you owe (a **liability**).
+A purchase on the card adds to what you owe; paying the card takes cash out and brings what
+you owe down.
+
+**Adding a card.** Open **⋮ → Settings → Books → Cash, Bank & Cards** and tap **+ New card**.
+Give it a **Card name** (for example *BDO Visa*), and optionally a credit limit and the last
+four digits, shown as **•••• 1234**. You can hold up to 5 cards (**Credit cards (N of 5)**);
+they do not count toward the 50 categories. Every card sits in the **Credit Cards** subtype of
+your Liabilities.
+
+**Spending with a card.** On **Home**, open **Quick Entry** and choose **Card**. Pick the
+**Credit card**, choose **Purchase** or **Refund**, then fill in the amount, the category and
+a note. A purchase counts in your budgets when you make it, not when you pay the card.
+
+**Paying a card.** Tap **Pay card** next to the card (in **Cash, Bank & Cards**). It opens
+**Money Out** with **Pay a liability** and the card already chosen; enter the amount and the
+cash ledger it comes from. You can also move the money with **⇄ Move → Between Accounts**.
+
+**Seeing your cards.**
+
+- **Home** shows the **Credit cards** tile next to your cash. Tap a card to see its entries.
+- **Reports → Credit cards** shows each card's **Opening balance**, **Spent on cards**,
+  **Card payments** and **Closing balance**, with **Available** when it has a limit.
+- **Cash Coverage** counts what you owe on your cards. The cash-flow figures do not, because a
+  card purchase moves no cash until you pay it.
 
 ## Bills to pay and to collect
 
@@ -272,6 +379,7 @@ The report pages are:
 - **Budget** — **Budget vs Actual**: budget against what was actually spent.
 - **Charts** — **Monthly income and spending**, **Income by account** and **Spending by
   account**.
+- **Credit cards** — the book balance of every card, its spending and its payments.
 
 Use **Filters** to set the **Date Range:**, the **Fund:** and the **Project:**. **Hide** closes
 the filters again.
