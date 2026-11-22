@@ -110,13 +110,34 @@ decision, not an accident.
 
 It is how much of the bills coming due your **Total Balance** covers. When no bills are due,
 Pondo Flow divides the balance by your average spending over the last three complete months
-instead, and says so.
+instead, and says so. What you owe on your credit cards is counted too, because it is money you
+will have to pay.
+
+### How do I record credit card spending?
+
+Add the card once in **⋮ → Settings → Books → Cash, Bank & Cards → + New card** (up to 5
+cards). Then, on **Home**, open **Quick Entry** and choose **Card** for every purchase or
+refund. When you pay the card, tap **Pay card** next to it, or record **Money Out** with the
+card as the category. A card is a liability: a purchase adds to what you owe, and only the
+payment takes cash out — which is why card purchases do not show in your cash flow until you
+pay. See the [User Guide](GUIDE.md#credit-cards).
+
+### My cash in the app does not match my wallet or my bank. How do I fix it?
+
+Use **Adjust** on the **Entries** tab. Pick the account, then either **Set the Balance** to the
+real amount or **Add or Subtract** the difference. By default the difference is booked as
+income or an expense; choose **Balance Adjustments** under **Other Side** if it is only a
+correction. See the [User Guide](GUIDE.md#adjusting-a-balance).
 
 ### Can I move money between funds?
 
 Yes — **⇄ Move** in **Quick Entry**, or **Transfer** on a fund. Moving money between funds
 does not change your total; it only changes which pot it is in. A transfer is not counted as
 **Money In** or **Money Out**.
+
+**⇄ Move → Between Accounts** also moves money between two accounts of your chart — for
+example from cash to a credit card, which pays the card. A move between an asset and equity is
+not allowed: record that as **Money In**, **Money Out** or an adjustment instead.
 
 ### Why is my Money In and Money Out total different from the report?
 
@@ -180,6 +201,15 @@ always see what happened to a number and when.
 Closing a period locks the entries and the audit rows inside it, so last month's numbers
 cannot quietly change. Corrections to a closed period are posted as new entries in the current
 period instead. You choose when to close — Pondo Flow never does it on its own.
+
+### What are Account Types and subtypes?
+
+Every account belongs to one of five types — **Assets**, **Liabilities**, **Equity**,
+**Income** (called **Revenue** in an organization's books) and **Expenses**. Subtypes, such as
+**Cash and Cash Equivalents** or **Credit Cards**, are optional headings that group accounts
+inside a type in the Chart of Accounts. You manage them in **⋮ → Settings → Books → Account
+Types**. They hold no money of their own and do not count toward the 50 categories. See the
+[User Guide](GUIDE.md#account-types).
 
 ### Can I give Pondo Flow a starting balance?
 
